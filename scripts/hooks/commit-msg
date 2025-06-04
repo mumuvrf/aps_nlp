@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Path to the Python validation script
+SCRIPT_PATH="./scripts/hooks/commit_check.py"
+
+# Run the script with the commit message file
+./env/Scripts/python.exe "$SCRIPT_PATH" "$1"
