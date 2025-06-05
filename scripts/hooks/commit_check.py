@@ -11,8 +11,7 @@ result = model.predict([message])
 print(result[0])
 
 if result[0] != "yes":
-    print(f"\n[X] Commit blocked: message classified as invalid")
-    print("Please write a clearer or more meaningful commit message.")
+    print(f"\n[X] Commit blocked: message classified as invalid. Please write a clearer or more meaningful commit message.", file=sys.stderr)
     sys.exit(1)
 
 print("[OK] Commit message passed validation.")
